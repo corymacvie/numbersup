@@ -27,6 +27,18 @@ export const Setup = ({ onStart }: SetupProps) => {
     setNames((prev) => prev.map((n, idx) => (idx === i ? value : n)));
   };
 
+  const handleFocus = (i: number) => {
+    setNames((prev) =>
+      prev.map((n, idx) => (idx === i && n === `Player ${i + 1}` ? "" : n)),
+    );
+  };
+
+  const handleBlur = (i: number) => {
+    setNames((prev) =>
+      prev.map((n, idx) => (idx === i && n.trim() === "" ? `Player ${i + 1}` : n)),
+    );
+  };
+
   return (
     <div className="mx-auto w-full max-w-md animate-fade-in">
       <div className="mb-8 flex flex-col items-center text-center">
