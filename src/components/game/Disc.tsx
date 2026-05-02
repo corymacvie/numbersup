@@ -11,7 +11,7 @@ interface DiscProps {
 
 export const Disc = ({ disc, onClick, disabled }: DiscProps) => {
   const { faceUp, number, status } = disc;
-  const showUnderline = number === 6 || number === 9;
+  const showUnderline = false;
 
   return (
     <button
