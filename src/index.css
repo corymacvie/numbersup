@@ -47,8 +47,14 @@
     --disc-number: 240 30% 12%;
 
     /* Effects */
-    --shadow-disc: 0 6px 0 hsl(var(--disc-edge)), 0 12px 20px -6px hsl(38 60% 30% / 0.4);
-    --shadow-disc-lifted: 0 10px 0 hsl(var(--disc-edge)), 0 20px 30px -8px hsl(38 60% 30% / 0.5);
+    --shadow-disc:
+      inset 0 6px 0 hsl(var(--disc-edge) / 0.55),
+      inset 0 -6px 0 hsl(var(--disc-edge) / 0.55),
+      0 10px 18px -6px hsl(38 60% 25% / 0.35);
+    --shadow-disc-lifted:
+      inset 0 6px 0 hsl(var(--disc-edge) / 0.55),
+      inset 0 -6px 0 hsl(var(--disc-edge) / 0.55),
+      0 18px 28px -8px hsl(38 60% 25% / 0.45);
     --gradient-bg: linear-gradient(135deg, hsl(45 65% 94%), hsl(35 70% 88%));
 
     --sidebar-background: 0 0% 98%;
