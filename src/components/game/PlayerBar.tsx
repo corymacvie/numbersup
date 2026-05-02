@@ -26,16 +26,7 @@ export const PlayerBar = ({ players, activeIdx, progress }: PlayerBarProps) => {
             <span className="w-full truncate font-display text-sm font-semibold sm:text-base">
               {p.name}
             </span>
-            <span
-              className={cn(
-                "rounded-full px-2 py-0.5 font-display text-xs font-bold",
-                isActive
-                  ? "bg-primary-foreground/20 text-primary-foreground"
-                  : "bg-secondary text-secondary-foreground",
-              )}
-            >
-              {reached}/12
-            </span>
+
             {isActive && (
               <div className="text-[10px] uppercase tracking-wide opacity-90">
                 Your turn
