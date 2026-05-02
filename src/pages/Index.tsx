@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Info, RotateCcw } from "lucide-react";
+import { RotateCcw } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/numbersup-logo.png";
 import { useNumbersUpGame } from "@/hooks/useNumbersUpGame";
