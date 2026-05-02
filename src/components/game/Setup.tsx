@@ -11,17 +11,25 @@ interface SetupProps {
 
 export const Setup = ({ onStart }: SetupProps) => {
   const [count, setCount] = useState(2);
-  const [names, setNames] = useState<string[]>(["Player 1", "Player 2", "Player 3", "Player 4"]);
+  const [names, setNames] = useState<string[]>([
+    "Player 1",
+    "Player 2",
+    "Player 3",
+    "Player 4",
+    "Player 5",
+    "Player 6",
+  ]);
 
   useEffect(() => {
     setNames((prev) => {
       const next = [...prev];
-      for (let i = 0; i < 4; i++) {
+      for (let i = 0; i < 6; i++) {
         if (!next[i]) next[i] = `Player ${i + 1}`;
       }
       return next;
     });
   }, []);
+
 
   const updateName = (i: number, value: string) => {
     setNames((prev) => prev.map((n, idx) => (idx === i ? value : n)));
@@ -50,8 +58,8 @@ export const Setup = ({ onStart }: SetupProps) => {
 
       <div className="rounded-3xl border-2 border-border bg-card p-6 shadow-lg">
         <Label className="mb-2 block font-display text-base">Number of players</Label>
-        <div className="mb-6 grid grid-cols-3 gap-2">
-          {[2, 3, 4].map((n) => (
+        <div className="mb-6 grid grid-cols-5 gap-2">
+          {[2, 3, 4, 5, 6].map((n) => (
             <button
               key={n}
               type="button"
