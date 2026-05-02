@@ -18,7 +18,10 @@ const Index = () => {
   const winner = game.winnerIdx !== null ? game.players[game.winnerIdx] : null;
 
   return (
-    <main className="min-h-screen px-4 py-4 sm:py-6">
+    <main
+      className="min-h-screen px-4 py-4 sm:py-6"
+      style={game.phase === "setup" ? { background: "hsl(var(--disc))" } : undefined}
+    >
       {/* Header */}
       <header className="mx-auto mb-4 flex w-full max-w-2xl items-center justify-between">
         <div className="flex items-center gap-2">
