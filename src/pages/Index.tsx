@@ -32,7 +32,7 @@ const Index = () => {
           size="lg"
           onClick={() => setShowInfo(true)}
           aria-label="How to play"
-          className="rounded-full bg-accent font-display text-base font-bold text-accent-foreground shadow-md hover:bg-accent/90 sm:text-lg"
+          className="bg-accent font-display text-base font-bold text-accent-foreground shadow-md hover:bg-accent/90 sm:text-lg"
         >
           Instructions
         </Button>
