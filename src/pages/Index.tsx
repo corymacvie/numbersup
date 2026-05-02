@@ -29,11 +29,10 @@ const Index = () => {
           <h1 className="sr-only">NumbersUp</h1>
         </div>
         <Button
-          variant="ghost"
-          size="sm"
+          size="lg"
           onClick={() => setShowInfo(true)}
           aria-label="How to play"
-          className="rounded-full font-display font-semibold"
+          className="rounded-full bg-accent font-display text-base font-bold text-accent-foreground shadow-md hover:bg-accent/90 sm:text-lg"
         >
           Instructions
         </Button>
