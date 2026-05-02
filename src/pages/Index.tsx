@@ -28,14 +28,26 @@ const Index = () => {
           <img src={logo} alt="NumbersUp logo" className="h-10 w-auto sm:h-12" />
           <h1 className="sr-only">NumbersUp</h1>
         </div>
-        <Button
-          size="lg"
-          onClick={() => setShowInfo(true)}
-          aria-label="How to play"
-          className="bg-accent font-display text-base font-bold text-accent-foreground shadow-md hover:bg-accent/90 sm:text-lg"
-        >
-          Instructions
-        </Button>
+        <div className="flex items-center gap-2">
+          {(game.phase === "playing" || game.phase === "won") && (
+            <Button
+              size="lg"
+              onClick={game.newGameSamePlayers}
+              aria-label="New Game"
+              className="h-11 w-11 bg-accent p-0 text-accent-foreground shadow-md hover:bg-accent/90"
+            >
+              <RotateCcw className="h-5 w-5" />
+            </Button>
+          )}
+          <Button
+            size="lg"
+            onClick={() => setShowInfo(true)}
+            aria-label="How to play"
+            className="bg-accent font-display text-base font-bold text-accent-foreground shadow-md hover:bg-accent/90 sm:text-lg"
+          >
+            Instructions
+          </Button>
+        </div>
       </header>
 
       {game.phase === "setup" && <Setup onStart={game.startGame} />}
@@ -65,17 +77,6 @@ const Index = () => {
             expected={expected}
           />
 
-          <div className="mx-auto mt-6 flex max-w-2xl justify-center">
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={game.newGameSamePlayers}
-              className="gap-2"
-            >
-              <RotateCcw className="h-4 w-4" />
-              New Game
-            </Button>
-          </div>
         </div>
       )}
 
