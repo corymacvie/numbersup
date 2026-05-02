@@ -30,12 +30,12 @@ const Index = () => {
         </div>
         <Button
           variant="ghost"
-          size="icon"
+          size="sm"
           onClick={() => setShowInfo(true)}
           aria-label="How to play"
-          className="rounded-full"
+          className="rounded-full font-display font-semibold"
         >
-          <Info className="h-6 w-6" />
+          Instructions
         </Button>
       </header>
 
