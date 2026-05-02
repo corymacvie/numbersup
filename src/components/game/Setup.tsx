@@ -103,6 +103,10 @@ export const Setup = ({ onStart }: SetupProps) => {
           Start Game
         </Button>
       </div>
+
+      <p className="mt-4 text-center font-display text-sm text-muted-foreground">
+        Age 2+ | 2+ Players | 2+ Min Play
+      </p>
     </div>
   );
 };
