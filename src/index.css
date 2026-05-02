@@ -44,7 +44,7 @@
     /* Disc colors */
     --disc: 48 95% 60%;        /* sunny yellow */
     --disc-edge: 38 80% 45%;   /* darker amber edge */
-    --disc-number: 240 30% 12%;
+    --disc-number: 0 0% 0%;
 
     /* Effects */
     --shadow-disc:
