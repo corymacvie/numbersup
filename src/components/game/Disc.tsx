@@ -40,6 +40,7 @@ export const Disc = ({ disc, onClick, disabled }: DiscProps) => {
             "backface-hidden absolute inset-0 flex items-center justify-center rounded-full bg-disc shadow-disc",
             "border-[3px] border-disc-edge/40",
           )}
+          style={{ backgroundColor: "hsl(var(--disc))" }}
         >
           <img
             src={logo}
