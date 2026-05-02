@@ -77,17 +77,6 @@ const Index = () => {
             expected={expected}
           />
 
-          <div className="mx-auto mt-6 flex max-w-2xl justify-center">
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={game.newGameSamePlayers}
-              className="gap-2"
-            >
-              <RotateCcw className="h-4 w-4" />
-              New Game
-            </Button>
-          </div>
         </div>
       )}
 
