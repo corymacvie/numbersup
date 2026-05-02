@@ -78,6 +78,8 @@ export const Setup = ({ onStart }: SetupProps) => {
                 id={`player-${i}`}
                 value={names[i] ?? ""}
                 onChange={(e) => updateName(i, e.target.value)}
+                onFocus={() => handleFocus(i)}
+                onBlur={() => handleBlur(i)}
                 maxLength={20}
                 className="mt-1"
               />
