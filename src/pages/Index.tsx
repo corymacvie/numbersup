@@ -34,9 +34,10 @@ const Index = () => {
               size="lg"
               onClick={game.newGameSamePlayers}
               aria-label="New Game"
-              className="h-11 w-11 bg-accent p-0 text-accent-foreground shadow-md hover:bg-accent/90"
+              className="bg-accent font-display text-base font-bold text-accent-foreground shadow-md hover:bg-accent/90 sm:text-lg"
             >
               <RotateCcw className="h-5 w-5" />
+              New Game
             </Button>
           )}
           <Button
