@@ -9,7 +9,7 @@ interface PlayerBarProps {
 
 export const PlayerBar = ({ players, activeIdx, progress }: PlayerBarProps) => {
   return (
-    <div className="mx-auto grid w-full max-w-2xl grid-cols-3 gap-2 sm:grid-cols-3 md:grid-cols-6">
+    <div className="mx-auto flex w-full max-w-2xl flex-wrap justify-center gap-2">
       {players.map((p, i) => {
         const isActive = i === activeIdx;
         const reached = isActive ? progress : p.highest;
