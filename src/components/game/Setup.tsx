@@ -58,8 +58,8 @@ export const Setup = ({ onStart }: SetupProps) => {
 
       <div className="rounded-3xl border-2 border-border bg-card p-6 shadow-lg">
         <Label className="mb-2 block font-display text-base">Number of players</Label>
-        <div className="mb-6 grid grid-cols-3 gap-2">
-          {[2, 3, 4].map((n) => (
+        <div className="mb-6 grid grid-cols-5 gap-2">
+          {[2, 3, 4, 5, 6].map((n) => (
             <button
               key={n}
               type="button"
