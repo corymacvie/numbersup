@@ -49,6 +49,7 @@
     /* Effects */
     --shadow-disc: 0 6px 0 hsl(var(--disc-edge)), 0 12px 20px -6px hsl(38 60% 30% / 0.4);
     --shadow-disc-lifted: 0 10px 0 hsl(var(--disc-edge)), 0 20px 30px -8px hsl(38 60% 30% / 0.5);
+    --shadow-disc-wrong: 0 6px 0 hsl(0 70% 35%), 0 12px 20px -6px hsl(0 70% 25% / 0.45);
     --gradient-bg: linear-gradient(135deg, hsl(45 65% 94%), hsl(35 70% 88%));
 
     --sidebar-background: 0 0% 98%;
@@ -115,5 +116,8 @@
   }
   .shadow-disc-lifted {
     box-shadow: var(--shadow-disc-lifted);
+  }
+  .shadow-disc-wrong {
+    box-shadow: var(--shadow-disc-wrong);
   }
 }
