@@ -56,7 +56,7 @@ export const Disc = ({ disc, onClick, disabled }: DiscProps) => {
             "backface-hidden rotate-y-180 absolute inset-0 flex flex-col items-center justify-center rounded-full",
             "border-[3px]",
             status === "wrong"
-              ? "bg-destructive/90 border-destructive text-destructive-foreground"
+              ? "bg-destructive/90 border-destructive text-destructive-foreground shadow-disc-wrong"
               : "bg-disc border-disc-edge/40 text-disc-number shadow-disc",
           )}
         >
