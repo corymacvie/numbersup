@@ -117,4 +117,7 @@
   .shadow-disc-lifted {
     box-shadow: var(--shadow-disc-lifted);
   }
+  .shadow-disc-wrong {
+    box-shadow: var(--shadow-disc-wrong);
+  }
 }
