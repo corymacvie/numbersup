@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { cn } from "@/lib/utils";
 import type { Player } from "@/hooks/useNumbersUpGame";
 
@@ -7,12 +8,12 @@ interface PlayerBarProps {
   progress: number;
 }
 
-export const PlayerBar = ({ players, activeIdx, progress }: PlayerBarProps) => {
+export const PlayerBar = ({ players, activeIdx }: PlayerBarProps) => {
+  const { t } = useTranslation();
   return (
     <div className="mx-auto flex w-full max-w-2xl flex-wrap justify-center gap-2">
       {players.map((p, i) => {
         const isActive = i === activeIdx;
-        const reached = isActive ? progress : p.highest;
         return (
           <div
             key={p.id}
@@ -29,7 +30,7 @@ export const PlayerBar = ({ players, activeIdx, progress }: PlayerBarProps) => {
 
             {isActive && (
               <div className="text-[10px] uppercase tracking-wide opacity-90">
-                Your turn
+                {t("game.yourTurn")}
               </div>
             )}
           </div>

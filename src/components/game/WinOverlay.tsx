@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import confetti from "canvas-confetti";
+import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 
 interface WinOverlayProps {
@@ -9,6 +10,7 @@ interface WinOverlayProps {
 }
 
 export const WinOverlay = ({ winnerName, onPlayAgain, onNewPlayers }: WinOverlayProps) => {
+  const { t } = useTranslation();
   useEffect(() => {
     const fire = (particleRatio: number, opts: confetti.Options) => {
       confetti({
@@ -29,12 +31,12 @@ export const WinOverlay = ({ winnerName, onPlayAgain, onNewPlayers }: WinOverlay
       <div className="w-full max-w-sm rounded-3xl border-2 border-border bg-card p-8 text-center shadow-2xl animate-scale-in">
         <div className="mb-2 text-5xl">🎉</div>
         <h2 className="font-display text-3xl font-bold text-foreground">
-          {winnerName} wins!
+          {t("win.title", { name: winnerName })}
         </h2>
-        <p className="mt-2 text-muted-foreground">Reached 12 first. Nice work!</p>
+        <p className="mt-2 text-muted-foreground">{t("win.subtitle")}</p>
         <div className="mt-6 flex flex-col gap-2">
           <Button size="lg" className="w-full font-display" onClick={onPlayAgain}>
-            Play Again
+            {t("win.playAgain")}
           </Button>
           <Button
             size="lg"
@@ -42,7 +44,7 @@ export const WinOverlay = ({ winnerName, onPlayAgain, onNewPlayers }: WinOverlay
             className="w-full font-display"
             onClick={onNewPlayers}
           >
-            New Players
+            {t("win.newPlayers")}
           </Button>
         </div>
       </div>

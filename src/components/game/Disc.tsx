@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { cn } from "@/lib/utils";
 import logo from "@/assets/numbersup-logo.png";
 import type { DiscState } from "@/hooks/useNumbersUpGame";
@@ -10,6 +11,7 @@ interface DiscProps {
 }
 
 export const Disc = ({ disc, onClick, disabled }: DiscProps) => {
+  const { t } = useTranslation();
   const { faceUp, number, status } = disc;
   const showUnderline = false;
 
@@ -18,7 +20,7 @@ export const Disc = ({ disc, onClick, disabled }: DiscProps) => {
       type="button"
       onClick={onClick}
       disabled={disabled || faceUp}
-      aria-label={faceUp ? `Disc showing ${number}` : "Face-down disc"}
+      aria-label={faceUp ? t("game.discShowing", { n: number }) : t("game.discFaceDown")}
       className={cn(
         "perspective-1000 group aspect-square w-full select-none rounded-full",
         "transition-transform duration-200",
