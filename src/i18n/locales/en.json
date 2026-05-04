@@ -17,7 +17,8 @@
     "flipPrompt": "{{name}} — flip",
     "yourTurn": "Your turn",
     "discShowing": "Disc showing {{n}}",
-    "discFaceDown": "Face-down disc"
+    "discFaceDown": "Face-down disc",
+    "flipVerb": "flip"
   },
   "instructions": {
     "title": "How to play",

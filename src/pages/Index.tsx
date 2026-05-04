@@ -67,8 +67,7 @@ const Index = () => {
             <p className="font-display text-base text-muted-foreground sm:text-lg">
               <span className="font-semibold text-foreground">{activePlayer?.name}</span>
               {" — "}
-              {t("game.flipPrompt", { name: "" }).replace(/^\s*—\s*/, "")}
-              {" "}
+              {t("game.flipVerb")}{" "}
               <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-primary font-bold text-primary-foreground sm:h-10 sm:w-10">
                 {expected}
               </span>

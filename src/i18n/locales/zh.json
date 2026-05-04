@@ -17,7 +17,8 @@
     "flipPrompt": "{{name}} — 请翻开",
     "yourTurn": "你的回合",
     "discShowing": "圆盘显示 {{n}}",
-    "discFaceDown": "未翻开的圆盘"
+    "discFaceDown": "未翻开的圆盘",
+    "flipVerb": "请翻开"
   },
   "instructions": {
     "title": "游戏规则",
@@ -25,8 +26,7 @@
     "rule1": "轮流翻开圆盘。",
     "rule2": "翻对下一个数字?继续翻!",
     "rule3": "翻错顺序?所有圆盘翻回,你的回合结束。",
-    "rule4": "最先翻到 12 的玩家获胜。"
-,
+    "rule4": "最先翻到 12 的玩家获胜。",
     "gotIt": "明白了"
   },
   "win": {

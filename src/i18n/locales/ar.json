@@ -17,7 +17,8 @@
     "flipPrompt": "{{name}} — اقلب",
     "yourTurn": "دورك",
     "discShowing": "قرص يظهر {{n}}",
-    "discFaceDown": "قرص مقلوب"
+    "discFaceDown": "قرص مقلوب",
+    "flipVerb": "اقلب"
   },
   "instructions": {
     "title": "طريقة اللعب",

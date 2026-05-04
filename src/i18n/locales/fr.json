@@ -17,7 +17,8 @@
     "flipPrompt": "{{name}} — retournez",
     "yourTurn": "À vous",
     "discShowing": "Disque affichant {{n}}",
-    "discFaceDown": "Disque face cachée"
+    "discFaceDown": "Disque face cachée",
+    "flipVerb": "retournez"
   },
   "instructions": {
     "title": "Comment jouer",

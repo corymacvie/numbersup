@@ -17,7 +17,8 @@
     "flipPrompt": "{{name}} — voltea",
     "yourTurn": "Tu turno",
     "discShowing": "Disco mostrando {{n}}",
-    "discFaceDown": "Disco boca abajo"
+    "discFaceDown": "Disco boca abajo",
+    "flipVerb": "voltea"
   },
   "instructions": {
     "title": "Cómo jugar",

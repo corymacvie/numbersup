@@ -17,7 +17,8 @@
     "flipPrompt": "{{name}} — पलटें",
     "yourTurn": "आपकी बारी",
     "discShowing": "डिस्क दिखा रही है {{n}}",
-    "discFaceDown": "उल्टी डिस्क"
+    "discFaceDown": "उल्टी डिस्क",
+    "flipVerb": "पलटें"
   },
   "instructions": {
     "title": "कैसे खेलें",
