@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { RotateCcw } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/numbersup-logo.png";
 import { useNumbersUpGame } from "@/hooks/useNumbersUpGame";
@@ -8,8 +8,10 @@ import { Board } from "@/components/game/Board";
 import { PlayerBar } from "@/components/game/PlayerBar";
 import { InstructionsDialog } from "@/components/game/InstructionsDialog";
 import { WinOverlay } from "@/components/game/WinOverlay";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 
 const Index = () => {
+  const { t } = useTranslation();
   const game = useNumbersUpGame();
   const [showInfo, setShowInfo] = useState(false);
 
@@ -25,7 +27,7 @@ const Index = () => {
       {/* Header */}
       <header className="mx-auto mb-4 flex w-full max-w-2xl items-center justify-between">
         <div className="flex items-center gap-2">
-          <img src={logo} alt="NumbersUp logo" className="h-10 w-auto sm:h-12" />
+          <img src={logo} alt={t("header.logoAlt")} className="h-10 w-auto sm:h-12" />
           <h1 className="sr-only">NumbersUp</h1>
         </div>
         <div className="flex items-center gap-2">
@@ -33,19 +35,20 @@ const Index = () => {
             <Button
               size="lg"
               onClick={game.newGameSamePlayers}
-              aria-label="New Game"
+              aria-label={t("header.newGame")}
               className="bg-accent px-3 font-display text-base font-bold text-accent-foreground shadow-md hover:bg-accent/90 sm:text-lg"
             >
-              New Game
+              {t("header.newGame")}
             </Button>
           )}
+          <LanguageSwitcher />
           <Button
             size="lg"
             onClick={() => setShowInfo(true)}
-            aria-label="How to play"
+            aria-label={t("header.instructions")}
             className="bg-accent px-3 font-display text-base font-bold text-accent-foreground shadow-md hover:bg-accent/90 sm:text-lg"
           >
-            Instructions
+            {t("header.instructions")}
           </Button>
         </div>
       </header>
@@ -63,7 +66,8 @@ const Index = () => {
           <div className="mx-auto my-4 max-w-2xl text-center">
             <p className="font-display text-base text-muted-foreground sm:text-lg">
               <span className="font-semibold text-foreground">{activePlayer?.name}</span>
-              {" — flip "}
+              {" — "}
+              {t("game.flipVerb")}{" "}
               <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-primary font-bold text-primary-foreground sm:h-10 sm:w-10">
                 {expected}
               </span>

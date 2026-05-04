@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -10,26 +11,24 @@ interface SetupProps {
 }
 
 export const Setup = ({ onStart }: SetupProps) => {
+  const { t } = useTranslation();
   const [count, setCount] = useState(2);
-  const [names, setNames] = useState<string[]>([
-    "Player 1",
-    "Player 2",
-    "Player 3",
-    "Player 4",
-    "Player 5",
-    "Player 6",
-  ]);
+  const defaultName = (i: number) => t("setup.playerDefault", { n: i + 1 });
+  const [names, setNames] = useState<string[]>(() =>
+    Array.from({ length: 6 }, (_, i) => `__default_${i}`),
+  );
 
+  // Replace any default placeholders when language changes
   useEffect(() => {
-    setNames((prev) => {
-      const next = [...prev];
-      for (let i = 0; i < 6; i++) {
-        if (!next[i]) next[i] = `Player ${i + 1}`;
-      }
-      return next;
-    });
-  }, []);
-
+    setNames((prev) =>
+      prev.map((n, i) => {
+        if (n.startsWith("__default_") || n.trim() === "") return defaultName(i);
+        // If it matches a previously translated default, refresh it
+        return n;
+      }),
+    );
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [t]);
 
   const updateName = (i: number, value: string) => {
     setNames((prev) => prev.map((n, idx) => (idx === i ? value : n)));
@@ -37,13 +36,13 @@ export const Setup = ({ onStart }: SetupProps) => {
 
   const handleFocus = (i: number) => {
     setNames((prev) =>
-      prev.map((n, idx) => (idx === i && n === `Player ${i + 1}` ? "" : n)),
+      prev.map((n, idx) => (idx === i && n === defaultName(i) ? "" : n)),
     );
   };
 
   const handleBlur = (i: number) => {
     setNames((prev) =>
-      prev.map((n, idx) => (idx === i && n.trim() === "" ? `Player ${i + 1}` : n)),
+      prev.map((n, idx) => (idx === i && n.trim() === "" ? defaultName(i) : n)),
     );
   };
 
@@ -51,13 +50,13 @@ export const Setup = ({ onStart }: SetupProps) => {
     <div className="mx-auto w-full max-w-md animate-fade-in">
       <div className="mb-8 flex flex-col items-center text-center">
         <img src={logo} alt="NumbersUp" className="mb-2 h-32 w-auto" />
-        <p className="text-muted-foreground">
-          Flip discs 1 → 12 in order. First to 12 wins!
-        </p>
+        <p className="text-muted-foreground">{t("setup.tagline")}</p>
       </div>
 
       <div className="rounded-3xl border-2 border-border bg-card p-6 shadow-lg">
-        <Label className="mb-2 block font-display text-base">Number of players</Label>
+        <Label className="mb-2 block font-display text-base">
+          {t("setup.numberOfPlayers")}
+        </Label>
         <div className="mb-6 grid grid-cols-5 gap-2">
           {[2, 3, 4, 5, 6].map((n) => (
             <button
@@ -80,11 +79,11 @@ export const Setup = ({ onStart }: SetupProps) => {
           {Array.from({ length: count }).map((_, i) => (
             <div key={i}>
               <Label htmlFor={`player-${i}`} className="text-xs text-muted-foreground">
-                Player {i + 1}
+                {t("setup.playerLabel", { n: i + 1 })}
               </Label>
               <Input
                 id={`player-${i}`}
-                value={names[i] ?? ""}
+                value={names[i]?.startsWith("__default_") ? defaultName(i) : (names[i] ?? "")}
                 onChange={(e) => updateName(i, e.target.value)}
                 onFocus={() => handleFocus(i)}
                 onBlur={() => handleBlur(i)}
@@ -98,14 +97,20 @@ export const Setup = ({ onStart }: SetupProps) => {
         <Button
           size="lg"
           className="mt-6 w-full font-display text-lg"
-          onClick={() => onStart(names.slice(0, count))}
+          onClick={() =>
+            onStart(
+              names
+                .slice(0, count)
+                .map((n, i) => (n.startsWith("__default_") ? defaultName(i) : n)),
+            )
+          }
         >
-          Start Game
+          {t("setup.startGame")}
         </Button>
       </div>
 
       <p className="mt-4 text-center font-display text-sm text-muted-foreground">
-        Age 2+ | 2+ Players | 2+ Min Play
+        {t("setup.ageLine")}
       </p>
     </div>
   );
