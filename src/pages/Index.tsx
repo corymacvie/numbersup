@@ -34,7 +34,7 @@ const Index = () => {
           {(game.phase === "playing" || game.phase === "won") && (
             <Button
               size="lg"
-              onClick={game.newGameSamePlayers}
+              onClick={game.backToSetup}
               aria-label={t("header.newGame")}
               className="bg-accent px-3 font-display text-base font-bold text-accent-foreground shadow-md hover:bg-accent/90 sm:text-lg"
             >
