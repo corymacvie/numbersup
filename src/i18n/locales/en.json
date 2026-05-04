@@ -1,0 +1,37 @@
+{
+  "header": {
+    "newGame": "New Game",
+    "instructions": "Instructions",
+    "language": "Language",
+    "logoAlt": "NumbersUp logo"
+  },
+  "setup": {
+    "tagline": "Flip discs 1 → 12 in order. First to 12 wins!",
+    "numberOfPlayers": "Number of players",
+    "playerLabel": "Player {{n}}",
+    "playerDefault": "Player {{n}}",
+    "startGame": "Start Game",
+    "ageLine": "Age 2+ | 2+ Players | 2+ Min Play"
+  },
+  "game": {
+    "flipPrompt": "{{name}} — flip",
+    "yourTurn": "Your turn",
+    "discShowing": "Disc showing {{n}}",
+    "discFaceDown": "Face-down disc"
+  },
+  "instructions": {
+    "title": "How to play",
+    "description": "Flip discs in numerical order from 1 to 12. Get one wrong? Your turn ends. First to 12 wins!",
+    "rule1": "Take turns flipping over discs.",
+    "rule2": "Flip the correct next number? Keep going!",
+    "rule3": "Flip out of order? All discs flip back and your turn ends.",
+    "rule4": "First player to reach 12 wins.",
+    "gotIt": "Got it"
+  },
+  "win": {
+    "title": "{{name}} wins!",
+    "subtitle": "Reached 12 first. Nice work!",
+    "playAgain": "Play Again",
+    "newPlayers": "New Players"
+  }
+}

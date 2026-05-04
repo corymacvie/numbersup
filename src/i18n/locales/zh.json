@@ -1,0 +1,38 @@
+{
+  "header": {
+    "newGame": "新游戏",
+    "instructions": "说明",
+    "language": "语言",
+    "logoAlt": "NumbersUp 标志"
+  },
+  "setup": {
+    "tagline": "按顺序翻开 1 到 12 号圆盘。最先到 12 者获胜！",
+    "numberOfPlayers": "玩家人数",
+    "playerLabel": "玩家 {{n}}",
+    "playerDefault": "玩家 {{n}}",
+    "startGame": "开始游戏",
+    "ageLine": "2 岁以上 | 2 人以上 | 2 分钟以上"
+  },
+  "game": {
+    "flipPrompt": "{{name}} — 请翻开",
+    "yourTurn": "你的回合",
+    "discShowing": "圆盘显示 {{n}}",
+    "discFaceDown": "未翻开的圆盘"
+  },
+  "instructions": {
+    "title": "游戏规则",
+    "description": "按 1 到 12 的顺序翻开圆盘。翻错一个,你的回合就结束。最先到 12 者获胜！",
+    "rule1": "轮流翻开圆盘。",
+    "rule2": "翻对下一个数字?继续翻!",
+    "rule3": "翻错顺序?所有圆盘翻回,你的回合结束。",
+    "rule4": "最先翻到 12 的玩家获胜。"
+,
+    "gotIt": "明白了"
+  },
+  "win": {
+    "title": "{{name}} 获胜!",
+    "subtitle": "率先到达 12。干得好!",
+    "playAgain": "再玩一次",
+    "newPlayers": "新玩家"
+  }
+}

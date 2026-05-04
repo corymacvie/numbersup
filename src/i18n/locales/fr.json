@@ -1,0 +1,37 @@
+{
+  "header": {
+    "newGame": "Nouvelle partie",
+    "instructions": "Instructions",
+    "language": "Langue",
+    "logoAlt": "Logo NumbersUp"
+  },
+  "setup": {
+    "tagline": "Retournez les disques de 1 à 12 dans l'ordre. Le premier à 12 gagne !",
+    "numberOfPlayers": "Nombre de joueurs",
+    "playerLabel": "Joueur {{n}}",
+    "playerDefault": "Joueur {{n}}",
+    "startGame": "Commencer",
+    "ageLine": "Âge 2+ | 2+ Joueurs | 2+ Min de jeu"
+  },
+  "game": {
+    "flipPrompt": "{{name}} — retournez",
+    "yourTurn": "À vous",
+    "discShowing": "Disque affichant {{n}}",
+    "discFaceDown": "Disque face cachée"
+  },
+  "instructions": {
+    "title": "Comment jouer",
+    "description": "Retournez les disques dans l'ordre numérique de 1 à 12. Une erreur ? Votre tour est fini. Le premier à 12 gagne !",
+    "rule1": "Retournez les disques à tour de rôle.",
+    "rule2": "Bon numéro suivant ? Continuez !",
+    "rule3": "Mauvais ordre ? Tous les disques se retournent et votre tour se termine.",
+    "rule4": "Le premier joueur à atteindre 12 gagne.",
+    "gotIt": "Compris"
+  },
+  "win": {
+    "title": "{{name}} gagne !",
+    "subtitle": "Arrivé à 12 en premier. Bien joué !",
+    "playAgain": "Rejouer",
+    "newPlayers": "Nouveaux joueurs"
+  }
+}

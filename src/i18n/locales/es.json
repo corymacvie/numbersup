@@ -1,0 +1,37 @@
+{
+  "header": {
+    "newGame": "Nueva partida",
+    "instructions": "Instrucciones",
+    "language": "Idioma",
+    "logoAlt": "Logo de NumbersUp"
+  },
+  "setup": {
+    "tagline": "¡Voltea los discos del 1 al 12 en orden. El primero en llegar a 12 gana!",
+    "numberOfPlayers": "Número de jugadores",
+    "playerLabel": "Jugador {{n}}",
+    "playerDefault": "Jugador {{n}}",
+    "startGame": "Iniciar partida",
+    "ageLine": "Edad 2+ | 2+ Jugadores | 2+ Min de juego"
+  },
+  "game": {
+    "flipPrompt": "{{name}} — voltea",
+    "yourTurn": "Tu turno",
+    "discShowing": "Disco mostrando {{n}}",
+    "discFaceDown": "Disco boca abajo"
+  },
+  "instructions": {
+    "title": "Cómo jugar",
+    "description": "Voltea los discos en orden numérico del 1 al 12. ¿Te equivocas? Termina tu turno. ¡El primero en llegar a 12 gana!",
+    "rule1": "Túrnense para voltear los discos.",
+    "rule2": "¿Volteaste el número correcto? ¡Sigue!",
+    "rule3": "¿Volteaste fuera de orden? Todos los discos vuelven y termina tu turno.",
+    "rule4": "El primer jugador en llegar a 12 gana.",
+    "gotIt": "Entendido"
+  },
+  "win": {
+    "title": "¡{{name}} gana!",
+    "subtitle": "Llegó a 12 primero. ¡Buen trabajo!",
+    "playAgain": "Jugar de nuevo",
+    "newPlayers": "Nuevos jugadores"
+  }
+}
